@@ -13,9 +13,6 @@ import shutil
 from search_text import *
 
 
-# os.rename(file_path, file_new_path)
-
-
 def rename_icon():
     for drawable, packag_name in get_appName().items():
         # print(drawable)
@@ -25,7 +22,7 @@ def rename_icon():
         if len(packag_name) > 1:
             # os.rename(drawable, packag_name)
             i = 1
-            while i <= len(packag_name)+1:
+            while i <= len(packag_name):
                 # 原文件存在
                 if os.path.exists('icons/' + drawable + '.png'):
                     shutil.copy('icons/' + drawable + '.png', '.')
